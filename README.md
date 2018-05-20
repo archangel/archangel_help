@@ -1,5 +1,8 @@
 # ArchangelHelp
 
+[![Travis CI](https://travis-ci.org/archangel/archangel_help.svg?branch=master)](https://travis-ci.org/archangel/archangel_help)
+[![Coverage Status](https://coveralls.io/repos/github/archangel/archangel_help/badge.svg?branch=master)](https://coveralls.io/github/archangel/archangel_help?branch=master)
+
 Introduction goes here.
 
 ## Installation
