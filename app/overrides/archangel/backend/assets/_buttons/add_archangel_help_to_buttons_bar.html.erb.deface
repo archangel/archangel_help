@@ -1,9 +1,9 @@
 <!-- insert_bottom '.btn-group' -->
 
-<%= link_to(fa_icon("question", text: Archangel.t(:help)), "#", class: "btn btn-link", data: { toggle: "modal", target: ".help-assets" }) %>
+<%= link_to(fa_icon("question", text: Archangel.t(:help)), "#", class: "btn btn-link", data: { toggle: "modal", target: "#help-modal" }) %>
 
-<div class="modal fade help-sites" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+<div id="help-modal"  class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title"><%= Archangel.t(:help) %></h5>
@@ -14,7 +14,15 @@
       </div>
 
       <div class="modal-body">
-        TODO
+        <% if index_action? %>
+          TODO: Index
+        <% elsif show_action? %>
+          TODO: Show
+        <% elsif new_action? %>
+          TODO: New
+        <% elsif edit_action? %>
+          TODO: Edit
+        <% end %>
       </div>
     </div>
   </div>
